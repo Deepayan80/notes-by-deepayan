@@ -2,11 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://deepayan80.github.io/notes-by-deepayan/index.html</loc>
+    <loc>https://deepayan80.github.io/notes-by-deepayan/</loc>
   </url>
 
   <url>
     <loc>https://deepayan80.github.io/notes-by-deepayan/posts/economic-survey1.html</loc>
+  </url>
+
+  <url>
+    <loc>https://deepayan80.github.io/notes-by-deepayan/posts/Pi-interview-guide.html</loc>
+  </url>
+
+  <url>
+    <loc>https://deepayan80.github.io/notes-by-deepayan/posts/introduction-to-strings.html</loc>
+  </url>
+
+  <url>
+    <loc>https://deepayan80.github.io/notes-by-deepayan/posts/smart-farming.html</loc>
   </url>
 
 </urlset>
