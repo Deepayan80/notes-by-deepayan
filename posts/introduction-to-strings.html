@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Introduction to Strings in Python for Data Analysis | Notes by Deepayan</title>
+    <meta name="description"
+        content="Learn Python strings from a data analysis perspective. Understand string basics, methods, cleaning text data, and real-world use cases with simple examples." />
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7GGKJH4K2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-Z7GGKJH4K2');
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <a href="../index.html" class="site-title">Notes by Deepayan</a>
+        </header>
+
+        <article>
+            <h1 class="post-title">Introduction to Strings in Python (For Data Analysis)</h1>
+            <div class="post-meta">Feb 2, 2026 · 6 min read</div>
+
+            <!-- IMAGE START -->
+            <img src="../image/introduction-to-strings.png" alt="Python code on laptop screen"
+                style="width:100%; margin:20px 0; border-radius:6px;">
+            <!-- IMAGE END -->
+
+            <div class="post-content">
+
+                <p>
+                    If you’re learning Python for <b>data analysis</b>, sooner or later you’ll realize something
+                    important:
+                    <i>most real-world data is messy text.</i>
+                </p>
+
+                <p>
+                    Names, emails, product descriptions, survey responses, tweets, addresses — all of these arrive as
+                    <b>strings</b>. Before you can analyze anything meaningful, you need to understand how Python
+                    handles text.
+                </p>
+
+                <p>
+                    In this post, I’ll introduce <b>strings in Python</b> from a <b>data analyst’s perspective</b> —
+                    not theory-heavy, but practical and intuitive.
+                </p>
+
+                <h3>What Is a String in Python?</h3>
+
+                <p>
+                    A string is simply a sequence of characters enclosed in quotes.
+                </p>
+
+                <pre><code>
+name = "Deepayan"
+city = 'Kolkata'
+                </code></pre>
+
+                <p>
+                    Python treats text as an object, which means strings come with built-in methods that make cleaning,
+                    transforming, and analyzing text extremely powerful.
+                </p>
+
+                <h3>Why Strings Matter in Data Analysis</h3>
+
+                <p>
+                    In data analysis, strings are used to:
+                </p>
+
+                <ul>
+                    <li>Clean raw datasets (remove spaces, symbols, noise)</li>
+                    <li>Standardize text (upper/lower case)</li>
+                    <li>Extract information (domains from emails, years from text)</li>
+                    <li>Filter rows based on text conditions</li>
+                </ul>
+
+                <p>
+                    Numeric data is useless if the text around it is inconsistent.
+                </p>
+
+                <h3>Accessing Characters (Indexing)</h3>
+
+                <p>
+                    Every character in a string has a position (index), starting from 0.
+                </p>
+
+                <pre><code>
+text = "Data"
+print(text[0])  # D
+print(text[1])  # a
+                </code></pre>
+
+                <p>
+                    This becomes useful when extracting specific patterns or fixing formatting issues.
+                </p>
+
+                <h3>Common String Methods You’ll Use Daily</h3>
+
+                <p>
+                    These methods appear constantly in data cleaning tasks:
+                </p>
+
+                <pre><code>
+text = "  Python for Data Analysis  "
+
+text.lower()      # '  python for data analysis  '
+text.upper()      # '  PYTHON FOR DATA ANALYSIS  '
+text.strip()      # 'Python for Data Analysis'
+text.replace("Data", "Business")
+                </code></pre>
+
+                <p>
+                    <b>strip()</b> alone can save hours when working with CSV files exported from messy sources.
+                </p>
+
+                <h3>Splitting Strings (Very Important)</h3>
+
+                <p>
+                    Splitting is how analysts break text into usable pieces.
+                </p>
+
+                <pre><code>
+email = "user@gmail.com"
+email.split("@")
+                </code></pre>
+
+                <p>
+                    Output:
+                </p>
+
+                <pre><code>
+['user', 'gmail.com']
+                </code></pre>
+
+                <p>
+                    This technique is widely used in log analysis, email validation, and URL processing.
+                </p>
+
+                <h3>Joining Strings</h3>
+
+                <p>
+                    The opposite of splitting is joining:
+                </p>
+
+                <pre><code>
+words = ["Data", "drives", "decisions"]
+" ".join(words)
+                </code></pre>
+
+                <p>
+                    Output:
+                </p>
+
+                <pre><code>
+'Data drives decisions'
+                </code></pre>
+
+                <h3>Checking Conditions in Strings</h3>
+
+                <p>
+                    Filtering data often depends on text conditions:
+                </p>
+
+                <pre><code>
+"india" in "Made in India"
+                </code></pre>
+
+                <p>
+                    This is extremely useful when filtering rows in pandas later.
+                </p>
+
+                <h3>Strings Are Immutable (A Subtle but Important Idea)</h3>
+
+                <p>
+                    Strings cannot be changed in place.
+                </p>
+
+                <pre><code>
+text = "data"
+text[0] = "D"  # This will cause an error
+                </code></pre>
+
+                <p>
+                    Instead, Python creates a new string. This matters when writing efficient data pipelines.
+                </p>
+
+                <h3>My Takeaway</h3>
+
+                <p>
+                    If numbers are the <i>bones</i> of data analysis, strings are the <i>nervous system</i>.
+                    They carry meaning, context, and intent.
+                </p>
+
+                <p>
+                    Mastering strings early makes pandas, SQL, NLP, and even machine learning feel far less
+                    intimidating.
+                </p>
+
+                <div style="margin:30px 0; padding:20px; border:1px solid #ddd; border-radius:6px;">
+                    <h3>Download the Jupyter Notebook</h3>
+                    <p>
+                        Want to practice everything covered in this post?
+                        Download the complete Jupyter Notebook with examples and exercises.
+                    </p>
+
+                    <a href="../downloads/introduction-to-strings.ipynb" download
+                        style="display:inline-block; padding:10px 16px; background:#c62828; color:#fff; text-decoration:none; border-radius:4px;">
+                        📥 Download Notebook (.ipynb)
+                    </a>
+                </div>
+
+
+                <p>
+                    <i>If this helped you, feel free to share it with someone starting Python for data analysis.</i>
+                </p>
+
+                <p>— Deepayan</p>
+
+            </div>
+        </article>
+
+        <footer>
+            © Notes by Deepayan
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
